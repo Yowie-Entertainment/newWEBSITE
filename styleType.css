@@ -1,0 +1,281 @@
+/*
+    Aidan Chien
+    6-7-2023
+    This is the style CSS class of my typing test, it changes all the locations, fonts, etc. of each of the elements.
+
+
+*/
+
+@import url('https://fonts.googleapis.com/css2?family=Cherry+Bomb+One&family=Quicksand:wght@600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans&display=swap');
+
+* { 
+    margin: 0; 
+    padding: 0; 
+    box-sizing: border-box; 
+    font-family: 'DM Sans', sans-serif;
+} 
+
+
+body{ 
+    display: flex; 
+    align-items: center; 
+    justify-content: center; 
+    min-height: 100vh; 
+    background: #f5b507; 
+} 
+
+ 
+.wrapper { 
+    background: #fff; 
+    width: 770px; 
+    border-radius: 10px; 
+    padding: 35px; 
+} 
+
+
+/* make the input field invisible */ 
+
+.wrapper .input-field { 
+    z-index: -999; 
+    Position: absolute; 
+    opacity: 0; 
+} 
+ 
+
+.wrapper .content-box{ 
+
+    padding: 13px 20px 0; 
+    border: 1px solid #ccc; 
+    border-radius: 10px; 
+
+} 
+
+.content-box .typing-text { 
+
+    max-height: 255px; 
+
+    /* creates a scroll box automatically to the size of the div (only 
+    in y-direction) */ 
+
+    overflow-y: auto; 
+
+} 
+
+ 
+.typing-test::-webkit-scrollbar{ 
+
+    width: 0;  
+
+} 	 	 
+
+ 
+ 
+
+.typing-text p{ 
+
+    font-size: 21px; 
+
+    /* stretches the text to always go to the end of the div */ 
+    text-align: justify; 
+    letter-spacing: 1px; 
+
+    /* breaking words up through line breaks */ 
+    word-break: break-all; 
+
+} 
+
+ 
+
+.typing-text p span{ 
+
+    position: relative; 
+
+} 
+
+
+/* if the span has correct class, make it green */ 
+
+.typing-text span.correct{ 
+
+    color: #56964f; 
+
+} 
+
+
+/* If the span has incorrect class, make it red */ 
+
+.typing-text span.incorrect{ 
+
+    color: #cb3439; 
+    background: #ffc0cb; 
+    outline: 1px solid #fff; 
+    border-radius: 4px; 
+
+} 
+
+
+/* if the span is active, change it to blue */ 
+
+.typing-text p span.active{ 
+    color: #17a2b8; 
+} 
+
+
+/* if the span was active before, make it blueand have a background and blink */ 
+
+.typing-text p span.active::before{ 
+
+    content: ""; 
+    position: absolute;
+    z-index: 999;
+    left: -2px; 
+    bottom: 10%; 
+    height: 80%; 
+    width: 3px; 
+    background: #17a2b8; 
+    animation: blink 1s ease-in-out infinite; 
+
+} 
+
+ 
+
+/* change how it blinks */ 
+
+@keyframes blink { 
+
+    50% { 
+
+        opacity: 0.5; 
+
+    } 
+
+} 
+ 
+
+.content-box .content{ 
+
+    display: flex; 
+    justify-content: space-between; 
+    margin-top: 17px; 
+    padding: 12px 0; 
+    border-top: 1px solid #ccc; 
+
+} 
+
+ 
+ 
+
+.content button{ 
+
+    border: none; 
+    outline: none; 
+    width: 105px; 
+    padding: 8px 0; 
+    color: #fff; 
+    cursor: pointer; 
+    font-size: 16px; 
+    border-radius: 5px; 
+    background: #17a2b8; 
+    align-items: center; 
+
+    /* when a transition happens, make it go over 0.3s and ease */ 
+    transition: transform 0.3s ease; 
+
+} 
+
+ 
+ 
+
+.content button:active{ 
+
+    /* make it so when clicked it will transform to 97% scale */ 
+    transform: scale(0.97); 
+
+} 
+
+ 
+ 
+
+.content .result-details{ 
+
+    display: flex; 
+
+    /* these two settings make it spaced completely across the flex box 
+    minus the 140 px of the try again button at the end. */ 
+    width: calc(100% - 140px); 
+    justify-content: space-between; 
+
+} 
+
+ 
+ 
+
+.result-details li{ 
+
+    /* makes it so there are no more bulletpoints */ 
+
+    list-style: none; 
+    display: flex; 
+    height: 22px; 
+    align-items: center; 
+
+} 
+
+ 
+ 
+
+/* creates the grey lines separating the trackers by targeting 
+
+everything except the "first child" which would create too many grey lines*/ 
+
+.result-details li:not(:first-child){ 
+
+    padding-left: 22px; 
+    border-left: 1px solid #ccc; 
+
+} 
+
+.result-details li p{ 
+
+    font-size: 16px; 
+
+} 
+
+ 
+ 
+
+/* change just the spans (the values after the 4 trackers) */ 
+
+.result-details li span{ 
+
+    display: block; 
+    margin-left: 10px; 
+    font-size: 18px; 
+    max-width: 100px;
+
+} 
+
+ 
+ 
+
+.result-details li:not(:first-child) span{ 
+
+    font-weight: 500; 
+
+} 
+
+ 
+ 
+
+.result-details li b{ 
+
+    font-weight: 500; 
+
+} 
+
+.result-details li{
+    
+}
+
+ 

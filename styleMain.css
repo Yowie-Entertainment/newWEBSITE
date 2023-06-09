@@ -1,0 +1,149 @@
+/*
+    Aidan Chien
+    6-7-2023
+    This is the CSS file for my home page, it contains the style for each of the buttons, as well as the pictures and fonts for the HTML.
+
+*/
+
+
+@import url('https://fonts.googleapis.com/css2?family=Rubik+Pixels&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Darumadrop+One&display=swap');
+
+
+* {
+    cursor: crosshair;
+}
+
+/* sets the overall website's size */
+.website {
+    max-height: 100%;
+    max-width: 100%;
+    position: relative;
+}
+
+body {
+    background: orange;
+}
+
+/* change the website's header with the background and the font family */
+.website-header {
+    display: flex;
+    text-align: center;
+    font-size: 80px;
+    background: orange;
+    margin-top: 0px;
+    color: white;
+    font-weight: 20px;
+    font-family: 'Rubik Pixels', cursive;
+}
+
+/* change the link of the wpm in the middle fo the circle*/
+.wpm-link {
+    text-align: center;
+    margin-top: -58%;
+    margin-left: -55%;
+    margin-right: -55%;
+    
+}
+
+/* change the div  of the wpm */
+.typDiv{
+    display: inline-block;
+    background: lightblue;
+    padding-top: 40%;
+    border-radius: 100%;
+    width: 40%;
+    border-style: solid;
+    border-width: 15px;
+    border-color: black;
+    cursor: pointer;
+    transition: 0.3s;
+
+}
+
+/* on hover, change the background */
+.typDiv:hover{
+    background: rgb(154, 188, 204);
+}
+
+
+/* change the div of the reaction time test */
+.reacDiv {
+    padding-top: 18%;
+    width: 18%;
+    background: yellow;
+    display: inline-block;
+    position: absolute;
+    left: 52%;
+    top: 62%;
+    border-radius: 50%;
+    border-style: solid;
+    border-color: black;
+    cursor: pointer;
+    border-width: 15px;
+    transition: 0.3s;
+}
+
+/* change the color of the reaction time div on hover */
+.reacDiv:hover{
+    background:rgb(211, 211, 7);
+}
+
+.reaction-time-link{
+    position: absolute;
+    left: 1%;
+    top: 33%;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.reaction-time-link p {
+    cursor: pointer;
+}
+
+.textDiv {
+    font-family: 'Quicksand', sans-serif;
+    cursor: pointer;
+    font-size: 100%;
+    font-size: 60px;
+    position: absolute;
+    left: 32%;
+    top: 47%;
+}
+
+.flex-container {
+    text-align: center;
+}
+
+.reaction-time-link p{
+    font-family: 'Quicksand', sans-serif;
+    font-size: 30px;
+}
+
+/* format each of the images's positions and sizes etc */
+.explosion {
+    width: 350px;
+    height: 140px;
+    border-radius: 10px;
+}
+
+.meteor {
+    width: 300px;
+    height: 100px;
+    border-radius: 8px;
+    align-content: center;
+    margin-top: 30px;
+}
+
+.monkey{
+    width: 400px;
+    border-radius: 50%;
+    padding-top: 10%;
+    position: absolute;
+    z-index: -999;
+    left: 5%;
+    top: 30%;
+
+}

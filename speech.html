@@ -1,0 +1,41 @@
+
+<!--
+    Aidan Chien
+    6-7-2023
+    This HTML file is not referenced in the final project however, it is the strucutre for the text to speech, which is a speech box and a convert button
+    as well as different voices to speak the text that the user has typed.
+
+
+-->
+
+<!DOCTYPE html>
+
+<head>
+    <title>Text to Speech</title>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+    <div class="wrapper">
+        <!--Creates a text box to enter the text into and a dropdown menu to choose the voice-->
+        <header> Text to Speech</header>
+        <form action="#">
+            <div class="row">
+                <label>Enter Text</label>
+                <textarea></textarea>
+            </div>
+            <div class="row">
+                <label>Select voice</label>
+                <div class="outer">
+                    <select>
+                    </select>
+                </div>
+            </div>
+            <!--This button would create a new utterance with the text in the box and will make a text to speech speak it out loud-->
+            <button>Convert To Speech</button>
+        </form>
+    </div>
+
+    <script src="main.js"></script>
+</body>

@@ -1,0 +1,55 @@
+<!--
+    Aidan Chien
+    6-7-2023
+    This is the structure for the typing test, creating the box and the divs for the list of stats as well as the typing text.
+
+-->
+
+<!DOCTYPE html> 
+
+<html> 
+    <head> 
+        <title>WPM Test</title> 
+        <link rel="stylesheet" href="styleType.css"> 
+    </head> 
+    <body>
+        <!--This class is the overall wrapper, the text is an input field which will be hidden after-->
+        <div class="wrapper"> 
+            <input type="text" class="input-field"> 
+            <div class="content-box"> 
+                <div class="typing-text"> 
+                    <p></p> 
+                </div> 
+                <div class="content"> 
+                    <ul class="result-details"> 
+                            <li class="time"> 
+                                <p>Time Left:</p> 
+                                <!--span is like a div but stays inline 
+                                b makes the 60 bold--> 
+                                <span><b>60</b>s</span> 
+                            </li> 
+                            <li class="mistakes"> 
+                                <p>Accuracy:</p>
+                                <span>0</span><span>%</span>
+                            </li> 
+
+                            <li class="wpm"> 
+                                <p>Raw WPM:</p> 
+                                <span>0</span> 
+                            </li> 
+                            <li class="cpm"> 
+                                <p>WPM:</p> 
+                                <span>0</span> 
+                            </li> 
+                    </ul> 
+                    <!--Try again button to reset the timer and get a new paragraph-->
+                    <button>Try Again</button> 
+                </div> 
+            </div> 
+        </div> 
+        <script src="js/paragraphs.js"></script> 
+        <script src="js/script.js"></script> 
+
+    </body> 
+
+</html> 
